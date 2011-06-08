@@ -1,0 +1,32 @@
+%section#brand
+  %h1
+    = link_to "Table-View", root_path
+
+%section#navigation
+  %nav
+    %ul
+      %li.split
+        Nav:
+      %li
+        = link_to "...", root_path
+      %li.split
+        |
+      %li
+        = link_to "...", root_path
+
+%section#authentication
+  %ul
+    - if @active_account.present?
+      %li#account
+        = link_to @active_account.email, edit_account_path(@active_account)
+      %li.split
+        |
+      %li#signout
+        = link_to "Sign Out", sign_out_path
+    - else
+      %li#signup
+        = link_to "Sign Up", sign_up_path
+      %li.split
+        or
+      %li#signin
+        = link_to "Sign In", sign_in_path

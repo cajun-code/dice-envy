@@ -1,0 +1,11 @@
+1. Create a folder based on the name of your app: `mkdir rpg-onslaught`
+2. Enter that folder: `cd rpg-onslaught`
+3. Create an RVM config file and gemset: `rvm --create --rvmrc 1.9.2@rpg-onslaught`
+4. Install Rails 3.1: `gem install rails --pre`
+5. Setup the Rails, sans-ActiveRecord : `rails new ../rpg-onslaught -O -T`
+6. Start bundling gems: `bundle`
+7. Start your mongodb server: `sudo mongod` or `mongod`
+7. Run these generators:
+  * `rails generate mongoid:config`
+  * `rails generate rspec:install`
+  * `rails generate cucumber:install`

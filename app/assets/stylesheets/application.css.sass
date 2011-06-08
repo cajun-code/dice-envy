@@ -1,0 +1,24 @@
+//= require "reset"
+//= require_self
+//= require_tree .
+
+@import "extras/mixins", "extras/variables"
+body header
+  & section
+    & ul li.split
+  & section#brand
+    &:hover
+      & h1 a
+    & h1
+      & a
+  & section#navigation
+    & nav ul
+      & li
+  & section#authentication
+    & ul
+      & li
+body article
+  & h1
+  & h2
+
+body footer
